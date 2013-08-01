@@ -2,11 +2,12 @@
 set -x
 set -e
 
-
 # Install rbenv from scratch on linux build agents
 # usage:
-#  export RBENV_VERSION=ruby-1.9.3
-#  sh install_rbenv.sh
+#   export RBENV_VERSION=1.9.3-p429
+#   sh install_rbenv.sh
+# then all following ruby script/command can be executed as
+#   ~/.rbenv/bin/rbenv exec ruby ...
 
 if [ ! -d ~/.rbenv ]; then
     echo "installing rbenv..."
