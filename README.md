@@ -21,6 +21,6 @@ In build script:
 
 3) Then use  '~/.rbenv/bin/rbenv exec' to execute all ruby command include ruby itself. E.g:
      
-      ~/.rbenv/bin/rbenv exec ruby -e "p 'Hello world'"    
-      ~/.rbenv/bin/rbenv exec rake
+    ~/.rbenv/bin/rbenv exec ruby -e "p 'Hello world'"    
+    ~/.rbenv/bin/rbenv exec rake
      
