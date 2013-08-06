@@ -14,7 +14,7 @@ In build script:
     
     export RBENV_VERSION=1.9.3-p327
     
-* One line script to setup ruby envionment
+* One line script to setup ruby envionment (assuming working directory are project root and there is a Gemfile)
     
     rm -rf ciscripts; git clone https://github.com/ThoughtWorksStudios/ciscripts.git && sh ciscripts/install_rbenv.sh
 
