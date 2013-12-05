@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -x
 set -e
 
@@ -28,7 +28,7 @@ if [ ! -d ~/.rbenv/versions/$RBENV_VERSION ]; then
         echo "done"
     fi
 
-    if [[ "$RBENV_VERSION" == jruby* ]]; then
+    if [ "$RBENV_VERSION" == "jruby*" ]; then
         echo "installing ruby ${RBENV_VERSION}..."
         ~/.rbenv/bin/rbenv install $RBENV_VERSION
         echo "done"
@@ -36,7 +36,7 @@ if [ ! -d ~/.rbenv/versions/$RBENV_VERSION ]; then
 fi
 
 echo "installing gems:"
-if [[ "$RBENV_VERSION" == jruby* ]]; then
+if [ "$RBENV_VERSION" == "jruby*" ]; then
     echo "installing openssl gem for jruby"
     ~/.rbenv/bin/rbenv exec gem install jruby-openssl
 fi
