@@ -20,19 +20,9 @@ if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
 fi
 
 if [ ! -d ~/.rbenv/versions/$RBENV_VERSION ]; then
-    if [[ "$RBENV_VERSION" == 2.* ]]; then
-        echo "installing prerequisites for ruby2.0.0"
-        sudo apt-get install zlib1g-dev openssl libopenssl-ruby1.9.1 libssl-dev libruby1.9.1 libreadline-dev
-        echo "installing ruby ${RBENV_VERSION}..."
-        CONFIGURE_OPTS="--disable-install-doc" ~/.rbenv/bin/rbenv install $RBENV_VERSION
-        echo "done"
-    fi
-
-    if [ "$RBENV_VERSION" == "jruby*" ]; then
-        echo "installing ruby ${RBENV_VERSION}..."
-        ~/.rbenv/bin/rbenv install $RBENV_VERSION
-        echo "done"
-    fi
+    echo "installing ruby ${RBENV_VERSION}..."
+    ~/.rbenv/bin/rbenv install $RBENV_VERSION
+    echo "done"
 fi
 
 echo "installing gems:"
