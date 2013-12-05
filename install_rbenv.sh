@@ -25,6 +25,9 @@ if [ ! -d ~/.rbenv/versions/$RBENV_VERSION ]; then
     echo "done"
 fi
 
+unset GEM_PATH
+unset GEM_HOME
+
 echo "installing gems:"
 if [ "$RBENV_VERSION" == "jruby*" ]; then
     echo "installing openssl gem for jruby"
