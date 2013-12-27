@@ -9,6 +9,11 @@ set -e
 # then all following ruby script/command can be executed as
 #   ~/.rbenv/bin/rbenv exec ruby ...
 
+if [ ! -z "$RBENV_REFRESH" ]; then
+    echo 'cleaning up old rbenv installation...'
+    rm -rf ~/.rbenv
+fi
+
 if [ ! -d ~/.rbenv ]; then
     echo "installing rbenv..."
     git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
