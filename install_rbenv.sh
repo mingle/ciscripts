@@ -34,6 +34,6 @@ if [ "$RBENV_VERSION" == "jruby*" ]; then
     ~/.rbenv/bin/rbenv exec gem install jruby-openssl
 fi
 
-~/.rbenv/bin/rbenv exec gem install bundler
+~/.rbenv/bin/rbenv exec gem install bundler $BUNDLE_VERSION
 ~/.rbenv/bin/rbenv exec ruby -S bundle install
 ~/.rbenv/bin/rbenv rehash
