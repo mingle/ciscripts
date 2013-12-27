@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -x
 set -e
 
@@ -29,11 +29,11 @@ unset GEM_PATH
 unset GEM_HOME
 
 echo "installing gems:"
-if [ "$RBENV_VERSION" == "jruby*" ]; then
+if [[ "$RBENV_VERSION" == jruby-1.6* ]]; then
     echo "installing openssl gem for jruby"
     ~/.rbenv/bin/rbenv exec gem install jruby-openssl
 fi
 
 ~/.rbenv/bin/rbenv exec gem install bundler $BUNDLE_VERSION
-~/.rbenv/bin/rbenv exec ruby -S bundle install
+~/.rbenv/bin/rbenv exec bundle install
 ~/.rbenv/bin/rbenv rehash
