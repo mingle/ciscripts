@@ -24,6 +24,11 @@ if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
 
+if [ ! -d ~/.rbenv/plugins/rbenv-gemset ]; then
+    echo "installing rbenv-gemset plugin..."
+    git clone https://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset
+fi
+
 if [ ! -d ~/.rbenv/versions/$RBENV_VERSION ]; then
     echo "installing ruby ${RBENV_VERSION}..."
     ~/.rbenv/bin/rbenv install $RBENV_VERSION
