@@ -31,6 +31,7 @@ fi
 
 if [ ! -d ~/.rbenv/versions/$RBENV_VERSION ]; then
     echo "installing ruby ${RBENV_VERSION}..."
+    ~/.rbenv/bin/rbenv update
     ~/.rbenv/bin/rbenv install $RBENV_VERSION
     echo "done"
 fi
